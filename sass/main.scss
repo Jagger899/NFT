@@ -1,0 +1,26 @@
+// font-family: 'Inter',sans-serif;
+// font-family: 'League Spartan',sans-serif;
+// font-family: 'MuseoModerno',sans-serif;
+// font-family: 'Orbitron',sans-serif;
+// font-family: 'Rajdhani',sans-serif;
+// font-family: 'Roboto',sans-serif;
+// font-family: 'Aldrich',sans-serif;
+// @font-face {
+//   font-family: 'Impact', sans-serif;
+//   src: url("../fonts/impact.woff2");
+// }
+@import "./reset";
+@import "./global";
+@import "./mixins";
+
+
+@import "./blocks/container.scss";
+@import "./blocks/header.scss";
+@import "./blocks/mobile-menu.scss";
+@import "./blocks/discover.scss";
+@import "./blocks/button.scss";
+@import "./blocks/card.scss";
+@import "./blocks/big-container.scss";
+@import "./blocks/tops.scss";
+@import "./blocks/explore.scss";
+@import "./blocks/collections.scss";

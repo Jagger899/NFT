@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Alethia-light', sans-serif;
+  src: url("../fonts/alethianext-light-webfont.woff2");
+}
+
+body {
+  height: 100%;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  // overflow: hidden;
+  // border: 1px solid red;
+  // background: rgba(32, 8, 59, 0.75);
+  // backdrop-filter: blur(92.30584716796875px);
+  background-image: url("../images/body-bg.jpg");
+}
+
+.main--with-margin {
+  margin-top: 195px;
+}
+
+a {
+  color: #fff;
+}
+
+.section__title {
+  font-size: 27px;
+}
+
+.section__link {
+  font-size: 27px;
+  display: flex;
+  gap: 16px;
+}
+
+.section__link svg {
+  margin-right: 15px;
+}
+
+@media (max-width:480px) {
+  .section__link {
+    display: none;
+  }
+}

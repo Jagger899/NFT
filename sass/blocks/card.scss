@@ -1,0 +1,150 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    display: flex;
+    font-family: 'Rajdhani', sans-serif;
+    // justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 44px;
+    // justify-content: space-between;
+    @include on1150 {
+      justify-content: space-between;
+    }
+
+    @include on600 {
+      gap: 0;
+    }
+
+    &--third{
+      // justify-content: space-between;
+      gap: 75px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -8px;
+
+    @include on1599 {
+      margin-top: 0;
+    }
+  }
+
+  &__user-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 200%;
+
+    @include on624 {
+      font-size: 16px;
+      line-height: 100%;
+    }
+  }
+
+  &__user-info {
+    display: flex;
+    gap:5px;
+  }
+
+  &__user-mail {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 228%;
+  }
+
+  &__text {
+    // margin-bottom: 23px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  &__time-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 13px;
+
+    @include on1599 {
+      // margin-top: 0;
+    }
+  }
+
+  &__advantages-list {
+    display: flex;
+    gap: 22px;
+  }
+
+  &__advantages-list-number {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 170%;
+  }
+
+  &__advantages-list-text {
+    font-size: 11px;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__price-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__price-info {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: -5px;
+
+    @include on1599 {
+      margin-left: 0;
+    }
+  }
+
+  &__price-descr {
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif
+  }
+
+  &__price-number {
+    color: var(--white-white-100, #FFF);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+  }
+
+  &__button {
+    padding: 12px 36px 8px 15px;
+    font-size: 18px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    margin-bottom: -7px;
+    margin-right: -6px;
+        
+
+    &::after {
+      content: '';
+      background-image: url("../images/discover/arrow-right.svg");
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 10px;
+      top: 18px;
+      right: 5px;
+    }
+  }
+
+  
+}

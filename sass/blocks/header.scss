@@ -1,0 +1,139 @@
+.header {
+  // height: 126px;
+  // border: 1px solid red;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  padding: 53px 0;
+  padding-left: 23px;
+  margin-bottom: 61px;
+
+  @include on1050 {
+    margin-bottom: 20px;
+  }
+  
+  &--fixed {
+    position: fixed;
+    background: rgba(32, 8, 59, 0.4);
+    backdrop-filter: blur(92.30584716796875px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    // margin-bottom: -61px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // gap: 20px;
+    // width: 100vw;
+    // gap: 262px;
+  }
+
+  &__logo {
+    color: rgba(255, 255, 255, 0.60);
+    position: relative;
+    // display: inline-block;
+    height: 29px;
+    width: 138px;
+
+    @include on800 {
+      font-size: 16px;
+    }
+
+    &::before {
+      content: '';
+      background-image: url("../images/header/icon-logo4.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      // display: inline;
+      background-position: center;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left:-23px;
+      top: -2px;
+      z-index:2;
+    }
+  }
+
+
+  &__logo-colory {
+    color: #fff;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 1014px;
+    gap: 20px;
+    align-items: center;
+    // border: 1px solid red;
+    margin-right: 9px;
+    line-height: 0.2;
+
+    @include on1599 {
+      margin-right: 0;
+      line-height: 1.1;
+    }
+
+    @include on1300 {
+      max-width: 800px;
+    }
+
+    @include on1050 {
+      max-width: 700px;
+    }
+
+    @include on920 {
+      max-width: 600px;
+    }
+  }
+
+  &__list-text {
+    display: flex;
+    gap: 66px;
+    max-width: 460px;
+
+    @include on1050 {
+      gap: 40px;
+    }
+
+    @include on800 {
+      display: none;
+    }
+  }
+
+  &__list-text-link {
+    color: rgba(255, 255, 255, 0.60);
+  }
+
+  &__list-svg {
+    display: flex;
+    gap: 41px;
+    align-items: center;
+
+    @include on800 {
+      display: none;
+    }
+  }
+
+  &__menu-icon {
+    height: 20px;
+    width: 22px;
+    display: none;
+    cursor: pointer;
+
+    @include on800 {
+      display: block;
+    }
+  }
+
+  &__menu-icon-img {
+    width: 100%;
+    height: 100%;
+  }
+
+}

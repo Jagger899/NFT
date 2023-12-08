@@ -1,0 +1,225 @@
+.tops {
+  margin-bottom: 132px;
+  box-sizing: border-box;
+
+  @include on480 {
+    margin-bottom: 108px;
+  }
+
+  &__title {
+    @include on920 {
+        font-size: 20px;
+      }
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 47px;
+  }
+
+  &__slider {
+    width: 100%;
+    // border: 1px solid red;
+
+    @include on480 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__photo {
+    height: 384px;
+    max-width: 447px;
+    position: relative;
+
+    @include on1150 {
+      height: 284px;
+    }
+
+    @include on600 {
+      max-width: 339px;
+      height: 268px;
+    }
+
+    // @include on1599 {
+    //   aspect-ratio: 2 / 1;
+    // }
+  }
+
+  &__photo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__card {
+    position: relative;
+    padding: 35px 27px 26px 37px;
+    max-width: 446px;
+    background-image: url("../images/tops/card-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-position: center;
+
+    @include on1250 {
+      padding: 24px 19px 9px 20px;
+    }
+
+    @include on600 {
+      max-width: 300px;
+    }
+  }
+
+  &__card-text {
+    font-size: 14px;
+
+    @include on1150 {
+      font-size: 9px;
+    }
+  }
+
+  &__card-user-mail {
+    font-size: 20px;
+
+    @include on1150 {
+      font-size: 12px;
+    }
+  }
+
+  &__card-user-svg{
+    width: 37px;
+    height: 37px;
+
+    // &--checked {
+    //   width: 15px;
+    //   height: 17px;
+    // }
+  }
+
+  // &__card-bg {
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 236px;
+  //   z-index: -1;
+  //   top: 0;
+  //   left: 0;
+  //   object-fit: cover;
+  // }
+
+  &__user-title {
+    font-size: 23px;
+
+    @include on1150 {
+      font-size: 14px;
+    }
+  }
+
+  &__card-advantages-list-number{
+    font-size: 23px;
+
+    @include on1150 {
+      font-size: 14px;
+    }
+  }
+
+  &__advantages-list-text{
+    font-size: 14px;
+
+    @include on1150 {
+      font-size: 9px;
+    }
+  }
+
+  &__card-price-text {
+    font-size: 14px;
+
+    @include on1150 {
+      font-size: 9px;
+    }
+  }
+
+  &__button {
+    font-size: 23px;
+    // padding: 12px 36px 8px 15px;
+    // width: 155px;    
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    background-image: linear-gradient(92deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
+    box-shadow: 0px 5.76px 139.681px 0px rgba(255, 86, 246, 0.51);
+    background-position: center;
+    border: 2.88px solid #FFA6FA;
+    height: 48px;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    padding-left: 14px;
+    gap: 21px;
+
+    @include on1150 {
+      font-size: 14px;
+    }
+
+    &--first {
+      background-image: linear-gradient(92deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
+      box-shadow: 0px 5.76px 139.681px 0px rgba(255, 86, 246, 0.51);
+      background-position: center;
+      border: 2.88px solid #FFA6FA;
+      height: 48px;
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      margin-top: 16px;
+        padding-left: 14px;
+        gap: 21px;
+      &::after {
+        display: none;
+      }
+    }
+    
+  }
+
+  &__button-arrow {
+    @include on1150 {
+      width: 22px;
+      height: 8px;
+    }
+  }
+
+  &__card-price-descr {
+    font-size: 12px;
+
+    @include on1150 {
+      font-size: 7px;
+    }
+  }
+
+  &__card-price-number {
+    font-size: 14px;
+
+    @include on1150 {
+      font-size: 9px;
+    }
+  }
+
+  &__link-button {
+    display: none;
+
+    @include on480 {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      width: 134px;
+      border-radius: 4px;
+      background: none;
+      border: 1.18px solid #FFA6FA;
+      filter: drop-shadow(0px 2.359px 57.217px rgba(255, 86, 246, 0.51));
+      backdrop-filter: blur(56.626731872558594px);
+      border-color: drop-shadow(0px 2.359px 57.217px rgba(255, 86, 246, 0.51));
+    }
+  }
+}
