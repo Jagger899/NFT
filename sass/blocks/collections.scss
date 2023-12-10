@@ -236,15 +236,6 @@
       border: 1.18px solid #FFA6FA;
       filter: drop-shadow(0px 2.359px 57.217px rgba(255, 86, 246, 0.51));
       backdrop-filter: blur(56.626731872558594px);
-      border-color: drop-shadow(0px 2.359px 57.217px rgba(255, 86, 246, 0.51));
-    }
-
-    &:hover {
-      border-radius: 2.211px;
-      border: 2.211px solid #FFA6FA;
-      background: linear-gradient(92deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
-      box-shadow: 0px 4.422px 107.23px 0px rgba(255, 86, 246, 0.51);
-      backdrop-filter: blur(106.12408447265625px);
     }
   }
 }

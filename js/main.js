@@ -9,8 +9,6 @@ console.log(exploreLink2)
 
 const openDescr = document.getElementById('sellers__title-svg');
 const sellersDescr = document.getElementById('sellers__desc');
-console.log(openDescr,sellersDescr)
-
 
 menuOpen.addEventListener('click', function () {
   mobileMenu.classList.add('mobile-menu--open');
@@ -30,7 +28,6 @@ window.addEventListener('scroll', function () {
     main.classList.add('main--with-margin')
   }
   
-  console.log('sroll is run')
 });
 
 for (const link of exploreLink) {
@@ -90,15 +87,13 @@ openDescr.addEventListener('click', function () {
     openDescr.classList.add('sellers__title-colory-svg--rotate');
   }
 });
-// openDescr.addEventListener('click', function () {
-//   if()
-// })
 
 const swiper1 = new Swiper('.tops__slider', {
   // Optional parameters
   loop: true,
   slidesPerView: 3,
   spaceBetween: 30,
+  grabcursor:true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -129,6 +124,7 @@ const swiper2 = new Swiper('.collections__slider', {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 30,
+  grabcursor:true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

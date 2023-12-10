@@ -1,5 +1,5 @@
 .description {
-  margin-bottom: 191px;
+  margin-bottom: 293px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   
@@ -158,5 +158,21 @@
       width: 7px;
       height: 10px;
     }
+  }
+
+  &__test-box {
+    padding: 50px;
+    margin-bottom: 100px;
+    background-color: #fff;
+  }
+
+  &__button-test {
+    margin-top: 40px;
+    color: #000;
+    display: block;
+    padding: 10px 15px;
+    border: 10px solid black;
+    border-image: linear-gradient(rgba(255, 166, 250, 1),
+      rgba(60, 121, 212, 1)) 10 round space;
   }
 }
