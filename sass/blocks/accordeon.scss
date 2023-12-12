@@ -1,0 +1,110 @@
+.accordeon {
+  width: 956px;
+
+  @include on480 {
+    max-width: 324px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+    padding: 0;
+    margin-bottom: 19px;
+   
+
+    @include on1100 {
+      font-size: 18px;
+    }
+
+    @include on480 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url("../images/info/arrow.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 15px;
+      cursor: pointer;
+      display: none;
+
+      @include on480 {
+        display: block;
+      }
+    }
+
+  }
+
+  &__title.accordeon__title--visible::after {
+    transform: rotate(180deg);
+  }
+
+  &__text{
+
+    @include on480 {
+      display: none;
+    }
+    
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  &__item {
+    // width: 176px;
+    position: relative;
+    &--fourth {
+      margin-left: 28px;
+
+      @include on1599 {
+        margin-left: 0;
+      }
+    }
+
+    @include on480 {
+      width: 324px;
+      margin: 0 auto;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 16px;
+      
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    // @include on480 {
+    //   display: none;
+    // }
+
+  }
+
+  &__list-link {
+    font-size: 15px;
+    color:#D9DBE1;
+    line-height: 176%;
+
+    @include on480 {
+      
+    }
+  }
+}

@@ -1,0 +1,157 @@
+.info {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  // margin-bottom: 20px;
+
+  @include on480 {
+    margin-bottom: 40px;
+  }
+
+  &__container {
+    margin-right: 118px;
+
+    @include on1599 {
+      margin-right: auto;
+    }
+  }
+  
+  &__inner {
+    display: flex;
+    // justify-content: space-between;
+    gap: 97px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 96px 0 89px;
+
+    @include on970 {
+      flex-direction: column;
+    }
+
+    @include on480 {
+      padding: 30px 0 0;
+      border-bottom: none;
+    }
+  }
+
+  &__description {
+    max-width: 280px;
+    // margin-right: 90px;
+
+    @include on970 {
+      display: flex;
+      max-width: 600px;
+      margin: 0 auto 50px;
+      gap: 20px;
+      align-items: center;
+    }
+    
+  }
+
+  &__description-photo {
+    display: none;
+
+    @include on970 {
+      display: block;
+      position: relative;
+    }
+
+    @include on550 {
+      display: none;
+    }
+  }
+
+  &__description-content {
+
+    @include on970{
+      width: 300px;
+    }
+
+    @include on480 {
+      width: 324px;
+    }
+    
+  }
+
+  &__logo {
+    font-size: 20px;
+    margin-bottom: 32px;
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    margin-left: 20px;
+
+    &::before {
+      content: '';
+      background-image: url("../images/info/logo.svg");
+      width: 17px;
+      height: 27px;
+      top: 0;
+      left: -20px;
+      position: absolute;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    margin-bottom: 27px;
+    line-height: 178%;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 18px;
+  }
+
+  &__socials svg {
+
+    &:hover {
+      
+      stroke: #FF56F6;
+      fill: #FF56F6;
+    }
+  }
+
+  &__content {
+    // width: calc(100% - 370px);
+  }
+
+  &__accordeon {
+    display: flex;
+    gap: 87px;
+    // justify-content: space-between;
+
+    @include on1250 {
+      gap: 40px;
+      max-width: 800px;
+    }
+
+    @include on1100 {
+      max-width: 800px;
+    }
+
+    @include on970 {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    @include on750 {
+      display: grid;
+      grid-template-columns: 200px 200px 200px;
+    }
+
+    @include on600 {
+      grid-template-columns: 250px 250px;
+      // justify-content: center;
+    }
+
+    @include on480 {
+      display: flex;
+      flex-direction: column;
+      // width: 100%;
+      // justify-content: center;
+      // align-items: center;
+      gap: 17px;
+    }
+  }
+
+}

@@ -149,3 +149,31 @@ const swiper2 = new Swiper('.collections__slider', {
   }
 
 });
+
+const accordeonTitles = document.querySelectorAll('.accordeon__title');
+const accordeonText = document.querySelectorAll('.accordeon__text');
+const accordeon = document.querySelector('.accordeon');
+
+
+accordeonTitles.forEach(function (accordeonTitle) {
+  console.log(accordeonTitle)
+
+  accordeonTitle.addEventListener('click', function () {
+    let currentElement = accordeonTitle.nextElementSibling;
+    console.log(currentElement);
+
+    if (!accordeonTitle.classList.contains('accordeon__title--visible')) {
+      accordeonTitle.classList.add('accordeon__title--visible');
+    } else {
+      accordeonTitle.classList.remove('accordeon__title--visible');
+    }
+
+    if (!currentElement.classList.contains('accordeon__text--visible')) {
+      currentElement.classList.add('accordeon__text--visible');
+    } else {
+      currentElement.classList.remove('accordeon__text--visible');
+    }
+  })
+});
+
+

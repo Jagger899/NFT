@@ -2,6 +2,10 @@
   margin-bottom: 293px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
+
+  @include on850 {
+    margin-bottom: 206px;
+  }
   
   &__main-container {
     max-width: 1600px;
