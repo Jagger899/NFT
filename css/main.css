@@ -322,7 +322,7 @@ a {
     margin-bottom: 0;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .discover {
     margin-bottom: 255px;
   }

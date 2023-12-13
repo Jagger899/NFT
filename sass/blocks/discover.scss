@@ -10,7 +10,7 @@
     margin-bottom: 0;
   }
 
-  @include on600 {
+  @include on650 {
     margin-bottom: 255px;
   }
 
@@ -179,12 +179,15 @@
       transform: translate(0);
       position: relative;
     }
+        
   }
 
   &__hero-photo {
+    // clip-path: polygon(20% 0, 100% 0, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 16%);
     @include on624 {
       max-width: 400px;
       margin: 0 auto;
+      
     }
 
     @include on480 {
