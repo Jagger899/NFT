@@ -6,6 +6,8 @@ const exploreLink = [...document.getElementsByClassName('explore__link')];
 console.log(exploreLink);
 const exploreLink2 = document.querySelectorAll('.explore__link');
 console.log(exploreLink2)
+const explorePhotos = document.querySelectorAll('.explore__right-photo');
+console.log(explorePhotos);
 
 const openDescr = document.getElementById('sellers__title-svg');
 const sellersDescr = document.getElementById('sellers__desc');
@@ -33,14 +35,29 @@ window.addEventListener('scroll', function () {
 for (const link of exploreLink) {
   link.addEventListener('click', function (event) {
     event.preventDefault();
+    let tabId = link.getAttribute('data-tab');
+    let currentTab = document.querySelector(tabId);
+    // console.log(currentTab)
+    // console.log(tabId);
 
-    for (const link of exploreLink) {
-      link.classList.remove('explore__link--checked');
-    }
+    if (!currentTab.classList.contains('explore__right-photo--visible')) {
+      for (const link of exploreLink) {
+        link.classList.remove('explore__link--checked');
+      };
 
-    link.classList.add('explore__link--checked');
-  })
-}
+      for (const image of explorePhotos) {
+        image.classList.remove('explore__right-photo--visible');
+      }
+
+      link.classList.add('explore__link--checked');
+      currentTab.classList.add('explore__right-photo--visible');
+    };
+  });
+};
+
+const firstExploreLink = document.querySelector('.explore__link');
+firstExploreLink.click();
+
 
 // exploreLink.forEach(function (link) {
 //   console.log(link);
