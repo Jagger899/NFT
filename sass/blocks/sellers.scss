@@ -27,6 +27,10 @@
     transform: rotate(180deg);
     cursor: pointer;
 
+    @include on480 {
+      margin-bottom: 2px;
+    }
+
     &--rotate {
       transform: translate(0);
     }

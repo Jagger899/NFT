@@ -57,14 +57,14 @@ for (const link of exploreLink) {
 //   });
 // });
 
-window.addEventListener('scroll', function () {
-  const scrollPosition = window.scrollY;
-  // console.log(scrollPosition)
-  if (scrollPosition === 0) {
-    header.classList.remove('header--fixed');
-    main.classList.remove('main--with-margin');
-  }
-});
+// window.addEventListener('scroll', function () {
+//   const scrollPosition = window.scrollY;
+//   // console.log(scrollPosition)
+//   if (scrollPosition === 0) {
+//     header.classList.remove('header--fixed');
+//     main.classList.remove('main--with-margin');
+//   }
+// });
 
 // openDescr.addEventListener('click', function () {
 //   sellersDescr.classList.add('sellers__desc--unvis');

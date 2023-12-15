@@ -72,6 +72,7 @@
 
   &__card-bg {
     margin-bottom: 65px;
+    width: 100%;
 
     @include on1150 {
       margin-bottom: 40px;
@@ -81,6 +82,10 @@
       height: 142px;
     }
   }
+
+    &__card-bg img {
+      width: 100%;
+    }
 
   &__user-photo {
     // transform: translate(0, -50%);

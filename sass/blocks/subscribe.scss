@@ -75,10 +75,18 @@
     }
 
     @include on624 {
-      max-width: 400px;
+      max-width: 500px;
+    }
+
+    @include on550 {
+      max-width: 450px;
     }
 
     @include on480 {
+      max-width: 400px;
+    }
+
+    @include on420 {
       max-width: 326px;
     }
   }
