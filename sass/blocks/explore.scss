@@ -132,7 +132,7 @@
     @include on750 {
       height: 400px;
       width: 200px;
-      position: relative;
+      // position: relative;
     }
   }
 
@@ -144,6 +144,26 @@
       display: block;
       position: relative;
     }
+
+    @include on1250 {
+      height: 615px;
+    }
+
+    @include on1150 {
+      width: 335px;
+    }
+
+    @include on950 {
+      width: 335px;
+    }
+
+    @include on750 {
+      height: 400px;
+      width: 200px;
+      position: relative;
+    }
+
+   
   }
 
   &__right-img {
@@ -164,7 +184,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
     
   }

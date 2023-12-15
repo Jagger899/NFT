@@ -139,20 +139,64 @@
     cursor: pointer;
 
     @include on800 {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      justify-content: flex-end;
+      align-items: flex-end;
     }
   }
 
-  &__list-svg-link svg {
-    &:hover {
-      fill: aqua;
-      stroke: aqua;
+  &__menu-open-icon {
+    width: 22px;
+    border: 2px solid #fff;
+    display: block;
+
+    &--first {
+      // transform: rotate(45deg);
+
+      &--rotate1 {
+        transform: rotate(45deg);
+      }
+    }
+
+
+    &--second {
+      width: 14px;
+    }
+
+    &--second-open {
+      width: 14px;
+    }
+
+    &--third {
+      // transform: rotate(135deg);
+
+      &--rotate2 {
+        transform: rotate(-45deg) translate(6px, -7px);
+      }
     }
   }
+
+  &__menu-icon-close {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  // &__list-svg-link svg {
+  //   &:hover {
+  //     fill: aqua;
+  //     stroke: aqua;
+  //   }
+  // }
 
   &__menu-icon-img {
     width: 100%;
     height: 100%;
   }
+}
 
+.hidden{
+  display: none;
 }

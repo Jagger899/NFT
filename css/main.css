@@ -254,16 +254,42 @@ a {
 }
 @media (max-width: 800px) {
   .header__menu-icon {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 }
-.header__list-svg-link svg:hover {
-  fill: aqua;
-  stroke: aqua;
+.header__menu-open-icon {
+  width: 22px;
+  border: 2px solid #fff;
+  display: block;
+}
+.header__menu-open-icon--first--rotate1 {
+  transform: rotate(45deg);
+}
+.header__menu-open-icon--second {
+  width: 14px;
+}
+.header__menu-open-icon--second-open {
+  width: 14px;
+}
+.header__menu-open-icon--third--rotate2 {
+  transform: rotate(-45deg) translate(6px, -7px);
+}
+.header__menu-icon-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header__menu-icon-img {
   width: 100%;
   height: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .mobile-menu {
@@ -991,6 +1017,11 @@ a {
     font-size: 14px;
   }
 }
+@media (max-width: 1016px) {
+  .tops__button {
+    width: 108px;
+  }
+}
 @media (max-width: 1150px) {
   .tops__button-arrow {
     width: 22px;
@@ -1159,7 +1190,6 @@ a {
   .explore__right {
     height: 400px;
     width: 200px;
-    position: relative;
   }
 }
 .explore__right-photo {
@@ -1170,6 +1200,28 @@ a {
 .explore__right-photo--visible {
   display: block;
   position: relative;
+}
+@media (max-width: 1300px) {
+  .explore__right-photo {
+    height: 615px;
+  }
+}
+@media (max-width: 1150px) {
+  .explore__right-photo {
+    width: 335px;
+  }
+}
+@media (max-width: 950px) {
+  .explore__right-photo {
+    width: 335px;
+  }
+}
+@media (max-width: 750px) {
+  .explore__right-photo {
+    height: 400px;
+    width: 200px;
+    position: relative;
+  }
 }
 .explore__right-img {
   position: absolute;
@@ -1186,7 +1238,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 
@@ -2347,11 +2399,13 @@ a {
 }
 @media (max-width: 480px) {
   .accordeon__text {
-    display: none;
+    opacity: 0;
+    max-height: 0;
+    transition: all 300ms linear;
   }
 }
 .accordeon__text--visible {
-  display: block;
+  opacity: 1;
 }
 .accordeon__item {
   position: relative;

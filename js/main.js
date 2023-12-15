@@ -8,16 +8,29 @@ const exploreLink2 = document.querySelectorAll('.explore__link');
 console.log(exploreLink2)
 const explorePhotos = document.querySelectorAll('.explore__right-photo');
 console.log(explorePhotos);
+const firstOpenSpan = document.querySelector('.header__menu-open-icon--first');
+const secondOpenSpan = document.querySelector('.header__menu-open-icon--second');
+const thirdOpenSpan = document.querySelector('.header__menu-open-icon--second');
 
 const openDescr = document.getElementById('sellers__title-svg');
 const sellersDescr = document.getElementById('sellers__desc');
 
+let flag = 1;
+
+function addFlag() {
+  flag += 1;
+}
+
 menuOpen.addEventListener('click', function () {
   mobileMenu.classList.add('mobile-menu--open');
+  secondOpenSpan.classList.add('hidden');
+  firstOpenSpan.classList.add('header__menu-open-icon--first--rotate1');
+  
 });
 
 menuClose.addEventListener('click', function () {
   mobileMenu.classList.remove('mobile-menu--open');
+  
 });
 
 const header = document.getElementById('header');
@@ -187,8 +200,10 @@ accordeonTitles.forEach(function (accordeonTitle) {
 
     if (!currentElement.classList.contains('accordeon__text--visible')) {
       currentElement.classList.add('accordeon__text--visible');
+      currentElement.style.maxHeight = currentElement.scrollHeight + 'px';
     } else {
       currentElement.classList.remove('accordeon__text--visible');
+      currentElement.style.maxHeight = null;
     }
   })
 });
