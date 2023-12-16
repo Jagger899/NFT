@@ -18,6 +18,10 @@
   @include on1050 {
     margin-bottom: 20px;
   }
+
+  @include on375 {
+    padding: 27px 0;
+  }
   
   // &--fixed {
   //   position: fixed;

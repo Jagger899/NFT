@@ -14,6 +14,10 @@
     margin-bottom: 255px;
   }
 
+  @include on375 {
+    margin-bottom: 253px;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -69,6 +73,21 @@
       font-size: 42px;
       margin-bottom: 40px;
     }
+
+    @include on375 {
+      text-align: left;
+      font-size:44px;
+      margin-bottom: 25px;
+      line-height: 125%;
+    }
+  }
+
+  &__title br {
+    display: none;
+
+    @include on375 {
+      display: block;
+    }
   }
 
   &__title-colory {
@@ -101,6 +120,10 @@
     @include on480 {
       font-size: 14px;
     }
+
+    @include on375 {
+      margin-bottom: 31px;
+    }
   }
 
   &__application {
@@ -116,6 +139,10 @@
     @include on950 {
       margin: 0 auto 40px;
       gap: 46px;
+    }
+
+    @include on480 {
+      gap: 20px;
     }
   }
 
@@ -152,14 +179,14 @@
     border-image: linear-gradient(rgba(255, 86, 246, 1), rgba(185, 54, 238, 1), rgba(59, 172, 226, 1), rgba(64, 106, 255, 1), rgba(255, 166, 250, 1),
           rgba(60, 121, 212, 1)) 10;
     font-size: 20px;
-    background: rgba(31, 9, 56, 0.75);
+    background: linear-gradient(92deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
     transition: all 300ms linear;
     font-weight: 700;
     position: relative;
     border-radius: 2px;
 
     &:hover {
-      background: linear-gradient(92deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
+      background: linear-gradient(0deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
     }
     &::after {
       position: absolute;
@@ -228,6 +255,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 700;
+
+      @include on480 {
+        font-size: 12px;
+      }
   }
 
   &__hero {

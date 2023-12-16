@@ -1,5 +1,15 @@
 .collections {
   margin-bottom: 155px;
+
+  @include on480 {
+    margin-bottom: 106px;
+  }
+
+  &__container {
+    @include on480 {
+      padding-right: 0;
+    }
+  }
   
 
   &__review {
@@ -68,6 +78,10 @@
     @include on600 {
       height: 400px;
     }
+
+    @include on375 {
+      height: 387px;
+    }
   }
 
   &__card-bg {
@@ -80,6 +94,10 @@
 
     @include on800 {
       height: 142px;
+    }
+
+    @include on375 {
+      margin-bottom: 49px;
     }
   }
 
@@ -108,6 +126,10 @@
 
     @include on1050 {
       top: 12%;
+    }
+
+    @include on375 {
+      top: 17%;
     }
   }
 
@@ -170,6 +192,11 @@
     @include on1050 {
       max-width: 200px;
     }
+
+    @include on375 {
+      max-width: 260px;
+      margin-bottom: 27px;
+    }
   }
 
   &__card-advantages-list-number{
@@ -219,6 +246,11 @@
     @include on600 {
       width: 162px;
       padding: 11px 0;
+    }
+
+    @include on375 {
+      padding: 9px 0;
+      font-size: 14px;
     }
     
 

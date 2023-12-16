@@ -56,6 +56,11 @@
       max-width: 325px;
     }
 
+    @include on375 {
+      line-height: 147%;
+      margin-bottom: 24px;
+    }
+
   }
 
   &__box {

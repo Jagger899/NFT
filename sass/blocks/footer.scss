@@ -13,10 +13,10 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    margin-right: 117px;
+    // margin-right: 117px;
 
     @include on1599 {
-      margin-right: auto;
+      // margin-right: auto;
     }
 
     @include on650 {

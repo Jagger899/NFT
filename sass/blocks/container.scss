@@ -3,4 +3,8 @@
   padding: 0 15px;
 
   margin: 0 auto;
+
+  @include on375 {
+    padding: 0 23px;
+  }
 }

@@ -17,6 +17,10 @@
     @include on920 {
         font-size: 20px;
       }
+
+      @include on480 {
+        font-size: 16px;
+      }
   }
 
   &__review {
@@ -24,6 +28,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 47px;
+
+    @include on480 {
+      margin-bottom: 35px;
+    }
   }
 
   &__slider {
@@ -31,7 +39,7 @@
     // border: 1px solid red;
 
     @include on480 {
-      margin-bottom: 40px;
+      margin-bottom: 27px;
     }
   }
 
@@ -153,13 +161,12 @@
     font-size: 23px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
-    // background-image: linear-gradient(92deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
+    background-image: linear-gradient(92deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
     
     background-position: center;
     border: 2.88px solid #FFA6FA;
     border-image: linear-gradient(rgb(255, 86, 246), rgb(185, 54, 238), rgb(59, 172, 226), rgb(64, 106, 255), rgb(255, 166, 250), rgb(60, 121, 212)) 10;
     // height: 48px;
-    background: rgba(31, 9, 56, 0.75);
     padding: 10px 0;
     display: flex;
     align-items: center;
@@ -170,7 +177,7 @@
     transition: all 500ms ease-in-out;
 
     &:hover {
-      background-image: linear-gradient(92deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
+      background-image: linear-gradient(0deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
       // border-image: linear-gradient(rgb(255, 86, 246), rgb(185, 54, 238), rgb(59, 172, 226), rgb(64, 106, 255), rgb(255, 166, 250), rgb(60, 121, 212)) 10;
       box-shadow: 0px 5.76px 139.681px 0px rgba(255, 86, 246, 0.51);
     }

@@ -104,3 +104,9 @@ a {
     }
   }
 }
+
+@media (max-width:375px) {
+  .main--with-margin {
+    margin-top: 116px;
+  }
+}
