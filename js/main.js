@@ -3,11 +3,11 @@ const mobileMenu = document.getElementById('mobile-menu');
 const menuClose = document.getElementById('menu-close');
 const main = document.getElementById('main');
 const exploreLink = [...document.getElementsByClassName('explore__link')];
-console.log(exploreLink);
+
 const exploreLink2 = document.querySelectorAll('.explore__link');
-console.log(exploreLink2)
+
 const explorePhotos = document.querySelectorAll('.explore__right-photo');
-console.log(explorePhotos);
+
 const firstOpenSpan = document.querySelector('.header__menu-open-icon--first');
 const secondOpenSpan = document.querySelector('.header__menu-open-icon--second');
 const thirdOpenSpan = document.querySelector('.header__menu-open-icon--second');
@@ -34,7 +34,7 @@ menuClose.addEventListener('click', function () {
 });
 
 const header = document.getElementById('header');
-console.log(header)
+
 
 window.addEventListener('scroll', function () {
   const scrollPosition = window.scrollY;
@@ -50,8 +50,7 @@ for (const link of exploreLink) {
     event.preventDefault();
     let tabId = link.getAttribute('data-tab');
     let currentTab = document.querySelector(tabId);
-    // console.log(currentTab)
-    // console.log(tabId);
+    
 
     if (!currentTab.classList.contains('explore__right-photo--visible')) {
       for (const link of exploreLink) {

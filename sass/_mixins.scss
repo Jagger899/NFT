@@ -76,6 +76,12 @@
   }
 }
 
+@mixin on849 {
+  @media (min-width: 849px) {
+    @content;
+  }
+}
+
 @mixin on800 {
   @media (max-width: 800px) {
     @content;

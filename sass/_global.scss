@@ -13,14 +13,8 @@ body {
   flex-direction: column;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  // overflow: hidden;
-  // border: 1px solid red;
-  // background: rgba(32, 8, 59, 0.75);
-  // backdrop-filter: blur(92.30584716796875px);
-  background-image: url("../images/body-bg.jpg");
-  // background: rgba(32, 8, 59, 1);
-  
-    // backdrop-filter: blur(92.30584716796875px);
+  position: relative;
+  background: rgba(32, 8, 59, 1);
   background-size: cover;
   overflow: hidden;
 }
