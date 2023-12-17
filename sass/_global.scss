@@ -13,10 +13,14 @@ body {
   flex-direction: column;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   position: relative;
   background: rgba(32, 8, 59, 1);
   background-size: cover;
   overflow: hidden;
+  // width: 100%;
+  // max-width: 100%;
 }
 
 .main--with-margin {

@@ -127,23 +127,33 @@
   }
 
   &__button {
-    padding: 12px 36px 8px 15px;
+    // padding: 12px 36px 8px 15px;
     font-size: 18px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
     margin-bottom: -7px;
     margin-right: -6px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    @include on480 {
+      font-size: 17px;
+      max-width: 115px;
+      
+    }
         
 
-    &::after {
-      content: '';
-      background-image: url("../images/discover/arrow-right.svg");
-      background-repeat: no-repeat;
-      width: 24px;
-      height: 10px;
-      top: 18px;
-      right: 5px;
-    }
+    // &::after {
+    //   content: '';
+    //   background-image: url("../images/discover/arrow-right.svg");
+    //   background-repeat: no-repeat;
+    //   width: 24px;
+    //   height: 10px;
+    //   top: 18px;
+    //   right: 5px;
+    // }
   }
 
   

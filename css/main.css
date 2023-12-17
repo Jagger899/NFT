@@ -67,6 +67,8 @@ body {
   flex-direction: column;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   position: relative;
   background: rgb(32, 8, 59);
   background-size: cover;
@@ -147,16 +149,10 @@ a {
 }
 
 .header {
+  height: 126px;
   padding: 53px 0;
   padding-left: 23px;
   margin-bottom: 61px;
-  position: fixed;
-  background: rgba(32, 8, 59, 0.4);
-  backdrop-filter: blur(92.305847168px);
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
 }
 @media (max-width: 1050px) {
   .header {
@@ -167,6 +163,15 @@ a {
   .header {
     padding: 27px 0;
   }
+}
+.header--fixed {
+  position: fixed;
+  background: rgba(32, 8, 59, 0.4);
+  backdrop-filter: blur(92.305847168px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 .header__inner {
   display: flex;
@@ -312,16 +317,16 @@ a {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/header/mobile-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   padding: 53px 0;
   transform: translate(100%);
-  z-index: 2;
+  z-index: 10;
   transition: transform 500ms linear;
   padding-left: 23px;
+  overflow-y: hidden;
 }
 @media (min-width: 849px) {
   .mobile-menu {
@@ -557,26 +562,6 @@ a {
 .discover__link-button:hover {
   background: linear-gradient(0deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
 }
-.discover__link-button::after {
-  position: absolute;
-  content: "";
-  background-image: url("../images/discover/arrow-right.svg");
-  width: 52px;
-  height: 15px;
-  top: 25px;
-  right: 22px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-@media (max-width: 480px) {
-  .discover__link-button::after {
-    width: 28px;
-    height: 8px;
-    top: 13px;
-    right: 18px;
-  }
-}
 .discover__link-button--clip {
   display: flex;
   justify-content: center;
@@ -707,12 +692,14 @@ a {
 }
 .discover__hero-card {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) -1.52%, rgba(255, 255, 255, 0.02) 104.35%);
-  background-image: url("../images/discover/card-bg.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  padding: 24px 59px 27px;
-  transform: translate(124px, -115px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  padding: 17px 19px 0 23px;
+  height: 180px;
+  width: 336px;
+  border-radius: 10px;
+  transform: translate(157px, -112px);
+  clip-path: polygon(14% 0%, 100% 0, 100% 100%, 0 100%, 0 23%);
 }
 @media (max-width: 624px) {
   .discover__hero-card {
@@ -781,18 +768,6 @@ a {
 .button:hover {
   background-image: linear-gradient(0deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
   box-shadow: 0px 5.76px 139.681px 0px rgba(255, 86, 246, 0.51);
-}
-.button::after {
-  position: absolute;
-  content: "";
-  background-image: url("../images/discover/arrow-right-small.svg");
-  width: 24px;
-  height: 11px;
-  top: 25px;
-  right: 32px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .card {
@@ -906,21 +881,22 @@ a {
   font-weight: 400;
 }
 .card__button {
-  padding: 12px 36px 8px 15px;
   font-size: 18px;
   font-family: "Rajdhani", sans-serif;
   font-weight: 600;
   margin-bottom: -7px;
   margin-right: -6px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-.card__button::after {
-  content: "";
-  background-image: url("../images/discover/arrow-right.svg");
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 10px;
-  top: 18px;
-  right: 5px;
+@media (max-width: 480px) {
+  .card__button {
+    font-size: 17px;
+    max-width: 115px;
+  }
 }
 
 .big-container {
@@ -1629,7 +1605,10 @@ a {
 }
 @media (max-width: 480px) {
   .collections__link-button {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     transition: all 300ms linear;
     margin: 0 auto;
     text-align: center;
@@ -1981,6 +1960,7 @@ a {
   border: 2.883px solid #616161;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(72.8012619019px);
+  -webkit-backdrop-filter: blur(72.8px);
   width: 577px;
   height: 473px;
   transform: translate(-20px, 216px);
@@ -2176,7 +2156,7 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(196, 196, 196, 0.2);
-  z-index: 2;
+  z-index: 1;
   border-radius: 4.422px;
 }
 @media (max-width: 1599px) {

@@ -25,6 +25,8 @@ menuOpen.addEventListener('click', function () {
   mobileMenu.classList.add('mobile-menu--open');
   secondOpenSpan.classList.add('hidden');
   firstOpenSpan.classList.add('header__menu-open-icon--first--rotate1');
+  // header.classList.remove('header--fixed');
+  // main.classList.remove('main--with-margin')
   
 });
 
@@ -38,12 +40,20 @@ const header = document.getElementById('header');
 
 window.addEventListener('scroll', function () {
   const scrollPosition = window.scrollY;
+
+  if (scrollPosition > 0 && mobileMenu.classList.contains('mobile-menu--open')) {
+    header.classList.remove('header--fixed');
+    
+    return;
+  };
+
   if (scrollPosition > 0) {
     header.classList.add('header--fixed');
-    main.classList.add('main--with-margin')
+    main.classList.add('main--with-margin');
   }
-  
 });
+
+
 
 for (const link of exploreLink) {
   link.addEventListener('click', function (event) {
@@ -86,14 +96,14 @@ firstExploreLink.click();
 //   });
 // });
 
-// window.addEventListener('scroll', function () {
-//   const scrollPosition = window.scrollY;
-//   // console.log(scrollPosition)
-//   if (scrollPosition === 0) {
-//     header.classList.remove('header--fixed');
-//     main.classList.remove('main--with-margin');
-//   }
-// });
+window.addEventListener('scroll', function () {
+  const scrollPosition = window.scrollY;
+  // console.log(scrollPosition)
+  if (scrollPosition === 0) {
+    header.classList.remove('header--fixed');
+    main.classList.remove('main--with-margin');
+  }
+});
 
 // openDescr.addEventListener('click', function () {
 //   sellersDescr.classList.add('sellers__desc--unvis');

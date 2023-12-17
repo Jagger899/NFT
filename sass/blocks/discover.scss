@@ -185,27 +185,6 @@
     &:hover {
       background: linear-gradient(0deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
     }
-    &::after {
-      position: absolute;
-      content: '';
-      background-image: url("../images/discover/arrow-right.svg");
-      width: 52px;
-      height: 15px;
-      top: 25px;
-      right: 22px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-
-      @include on480 {
-        width: 28px;
-        height: 8px;
-        top: 13px;
-        right: 18px;
-      }
-
-    }
 
     &--clip {
         display: flex;
@@ -350,17 +329,24 @@
 
   &__hero-card {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.10) -1.52%, rgba(255, 255, 255, 0.02) 104.35%);
-    background-image: url("../images/discover/card-bg.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    // background-image: url("../images/discover/card-bg.png");
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // background-position: center;
     // height: 182px;
       // stroke-width: 2.211px;
       // stroke: rgba(255, 255, 255, 0.28);
       // backdrop-filter: blur(30.400127410888672px);
     // clip-path: polygon(33% 1%, 100% 0, 100% 100%, 0 100%, 0 16%);
-    padding: 24px 59px 27px;
-    transform: translate(124px, -115px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    padding: 17px 19px 0 23px;
+    height: 180px;
+    width: 336px;
+    border-radius: 10px;
+    transform: translate(157px, -112px);
+    // clip-path: polygon(24% 0, 100% 0, 100% 53%, 100% 100%, 0 100%, 0 19%);
+    clip-path: polygon(14% 0%, 100% 0, 100% 100%, 0 100%, 0 23%);
 
     @include on624 {
       transform: translate(0);
