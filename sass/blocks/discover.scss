@@ -148,10 +148,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-image: linear-gradient(rgba(255, 86, 246, 1), rgba(185, 54, 238, 1), rgba(59, 172, 226, 1), rgba(64, 106, 255, 1), rgba(255, 166, 250, 1),
-          rgba(60, 121, 212, 1)) 10;
-    clip-path: polygon(20% 0%, 100% 0, 100% 70%, 80% 100%, 0 100%, 0% 30%);
-    background: #B936EE;
+    padding: 2px;
+    // border-image: linear-gradient(rgba(255, 86, 246, 1), rgba(185, 54, 238, 1), rgba(59, 172, 226, 1), rgba(64, 106, 255, 1), rgba(255, 166, 250, 1),
+    //       rgba(60, 121, 212, 1)) 10;
+    clip-path: polygon(16% 0%, 100% 0, 100% 70%, 80% 100%, 0 100%, 0% 26%);
+    clip-path: polygon(16% 0%, 100% 0, 100% 24%, 100% 72%, 84% 100%, 0 100%, 0% 85%, 0 26%);
+    clip-path: polygon(16% 0%, 100% 0, 100% 0%, 100% 72%, 84% 100%, 0 100%, 0% 100%, 0 26%);
+    
+    background: linear-gradient(270deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+    background: linear-gradient(92deg, #ffa6fa 47.49%, #3c79d5 98.81%);
 
     @include on480 {
       width: 135px;
@@ -159,31 +164,31 @@
   }
 
   &__link-button {
-  padding: 20px 10px;
+  padding: 20px 10px 20px 46px;
   // width: 250px;
 
   width: 100%;
   // text-align: center;
   // padding: 19px;
   // clip-path: polygon(19% 0, 63% 0%, 100% 0, 101% 71%, 86% 100%, 0 99%, 0% 80%, 0% 20%);
-  clip-path: polygon(20% 0%, 100% 0, 100% 70%, 80% 100%, 0 100%, 0% 30%);
+  clip-path: polygon(16% 0%, 100% 0, 100% 70%, 80% 100%, 0 100%, 0% 26%);
+  clip-path: polygon(16% 0%, 100% 0, 100% 24%, 100% 72%, 84% 100%, 0 100%, 0% 85%, 0 26%);
   position: relative;
   color: #fff;
   
-    border: 1.11px solid #FFA6FA;
-    filter: drop-shadow(0px 4.422px 107.23px rgba(255, 86, 246, 0.51));
-    backdrop-filter: blur(106.12408447265625px);
-    border-image: linear-gradient(rgba(255, 86, 246, 1), rgba(185, 54, 238, 1), rgba(59, 172, 226, 1), rgba(64, 106, 255, 1), rgba(255, 166, 250, 1),
-          rgba(60, 121, 212, 1)) 10;
+    // border: 1.11px solid #FFA6FA;
+    // filter: drop-shadow(0px 4.422px 107.23px rgba(255, 86, 246, 0.51));
+    // backdrop-filter: blur(106.12408447265625px);
+    // border-image: linear-gradient(rgba(255, 86, 246, 1), rgba(185, 54, 238, 1), rgba(59, 172, 226, 1), rgba(64, 106, 255, 1), rgba(255, 166, 250, 1), rgba(60, 121, 212, 1)) 10;
     font-size: 20px;
-    background: linear-gradient(92deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
+    background: linear-gradient(270deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
     transition: all 300ms linear;
     font-weight: 700;
     position: relative;
     border-radius: 2px;
 
     &:hover {
-      background: linear-gradient(0deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
+      background: linear-gradient(360deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
     }
 
     &--clip {
@@ -208,6 +213,10 @@
     // background: linear-gradient(92deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
     border-radius: 0px 5.527px 5.527px 0px;
     display: block;
+  }
+
+  @include on1599 {
+    padding: 20px 10px;
   }
 
     @include on480 {
