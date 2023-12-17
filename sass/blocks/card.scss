@@ -138,11 +138,17 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    @include on1599 {
+      margin-bottom: 0;
+    }
     @include on480 {
       font-size: 17px;
       max-width: 115px;
-      
+      margin-right: -17px;
     }
+
+
         
 
     // &::after {

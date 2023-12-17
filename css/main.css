@@ -757,7 +757,6 @@ a {
   stroke-width: 2.211px;
   stroke: #FFA6FA;
   filter: drop-shadow(0px 4.422px 107.23px rgba(255, 86, 246, 0.51));
-  backdrop-filter: blur(106.1240844727px);
   font-size: 20px;
   font-weight: 700;
   position: relative;
@@ -892,10 +891,16 @@ a {
   align-items: center;
   gap: 10px;
 }
+@media (max-width: 1599px) {
+  .card__button {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 480px) {
   .card__button {
     font-size: 17px;
     max-width: 115px;
+    margin-right: -17px;
   }
 }
 
