@@ -27,6 +27,10 @@
   &__inner {
     display: flex;
     flex-direction: column;
+
+    @include on480 {
+      margin-top: -30px;
+    }
   }
 
   &__top {

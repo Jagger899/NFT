@@ -15,12 +15,6 @@ const thirdOpenSpan = document.querySelector('.header__menu-open-icon--second');
 const openDescr = document.getElementById('sellers__title-svg');
 const sellersDescr = document.getElementById('sellers__desc');
 
-let flag = 1;
-
-function addFlag() {
-  flag += 1;
-}
-
 menuOpen.addEventListener('click', function () {
   mobileMenu.classList.add('mobile-menu--open');
   secondOpenSpan.classList.add('hidden');
@@ -43,7 +37,6 @@ window.addEventListener('scroll', function () {
 
   if (scrollPosition > 0 && mobileMenu.classList.contains('mobile-menu--open')) {
     header.classList.remove('header--fixed');
-    
     return;
   };
 

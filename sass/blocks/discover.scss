@@ -336,25 +336,41 @@
     }
   }
 
+  &__hero-card-box {
+    // background: linear-gradient(90deg, rgba(143, 141, 141, 0.1) -1.52%, rgba(156, 154, 154, 0.02) 104.35%);
+    // background-color: rgba(255, 255, 255, 0.28);
+    // background: linear-gradient(272.52deg, rgba(255, 166, 250, 0.3) 47.49%, rgba(60, 121, 213, 0.3) 98.81%);
+    background-color: rgba(255, 255, 255, 0.28);
+    background-clip: padding-box;
+    // backdrop-filter: blur(30px);
+    padding: 2px;
+    transform: translate(157px, -112px);
+    height: 184px;
+    width: 342px;
+    border-radius: 10px;
+    clip-path: polygon(14% 0%, 100% 0, 100% 100%, 0 100%, 0 23%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include on624 {
+      transform: translate(0);
+      position: absolute;
+      width: 100%;
+      bottom: -132px;
+    }
+  }
+
   &__hero-card {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.10) -1.52%, rgba(255, 255, 255, 0.02) 104.35%);
-    // background-image: url("../images/discover/card-bg.png");
-    // background-repeat: no-repeat;
-    // background-size: contain;
-    // background-position: center;
-    // height: 182px;
-      // stroke-width: 2.211px;
-      // stroke: rgba(255, 255, 255, 0.28);
-      // backdrop-filter: blur(30.400127410888672px);
-    // clip-path: polygon(33% 1%, 100% 0, 100% 100%, 0 100%, 0 16%);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    // background: linear-gradient(90deg, rgba(31, 199, 39, 0.1) -1.52%, rgba(236, 4, 4, 0.02) 104.35%);
+    background-color: rgba(34,15,65,0.4);
+    position: absolute;
+    z-index: 5;
     backdrop-filter: blur(30px);
     padding: 17px 19px 0 23px;
     height: 180px;
     width: 336px;
     border-radius: 10px;
-    transform: translate(157px, -112px);
-    // clip-path: polygon(24% 0, 100% 0, 100% 53%, 100% 100%, 0 100%, 0 19%);
     clip-path: polygon(14% 0%, 100% 0, 100% 100%, 0 100%, 0 23%);
     position: relative;
 
@@ -375,16 +391,13 @@
     // }
 
     @include on624 {
-      transform: translate(0);
-      position: absolute;
       width: 100%;
-      bottom: -132px;
     }
+         @include on400 {
+           padding-left: 38px;
+           padding-right: 38px;
+         }
 
-    @include on400 {
-      padding-left: 38px;
-      padding-right: 38px;
-    }
   }
 
   &__partners {

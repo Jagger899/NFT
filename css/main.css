@@ -75,7 +75,7 @@ body {
   overflow: hidden;
 }
 
-.main--with-margin {
+.main {
   margin-top: 195px;
 }
 
@@ -107,7 +107,15 @@ a {
   display: none;
 }
 
+@media (max-width: 1000px) {
+  .main {
+    margin-top: 150px;
+  }
+}
 @media (max-width: 480px) {
+  .main {
+    margin-top: 120px;
+  }
   .section__link {
     display: none;
   }
@@ -152,15 +160,22 @@ a {
   padding: 53px 0;
   padding-left: 23px;
   margin-bottom: 61px;
+  position: fixed;
+  background: rgba(32, 8, 59, 0.1);
+  backdrop-filter: blur(92.305847168px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 @media (max-width: 1050px) {
   .header {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .header {
-    padding: 27px 0;
+    padding: 27px 15px;
   }
 }
 .header--fixed {
@@ -338,6 +353,11 @@ a {
 .mobile-menu__inner {
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 480px) {
+  .mobile-menu__inner {
+    margin-top: -30px;
+  }
 }
 .mobile-menu__top {
   display: flex;
@@ -694,24 +714,43 @@ a {
     font-size: 12px;
   }
 }
+.discover__hero-card-box {
+  background-color: rgba(255, 255, 255, 0.28);
+  background-clip: padding-box;
+  padding: 2px;
+  transform: translate(157px, -112px);
+  height: 184px;
+  width: 342px;
+  border-radius: 10px;
+  clip-path: polygon(14% 0%, 100% 0, 100% 100%, 0 100%, 0 23%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 624px) {
+  .discover__hero-card-box {
+    transform: translate(0);
+    position: absolute;
+    width: 100%;
+    bottom: -132px;
+  }
+}
 .discover__hero-card {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) -1.52%, rgba(255, 255, 255, 0.02) 104.35%);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(34, 15, 65, 0.4);
+  position: absolute;
+  z-index: 5;
   backdrop-filter: blur(30px);
   padding: 17px 19px 0 23px;
   height: 180px;
   width: 336px;
   border-radius: 10px;
-  transform: translate(157px, -112px);
   clip-path: polygon(14% 0%, 100% 0, 100% 100%, 0 100%, 0 23%);
   position: relative;
 }
 @media (max-width: 624px) {
   .discover__hero-card {
-    transform: translate(0);
-    position: absolute;
     width: 100%;
-    bottom: -132px;
   }
 }
 @media (max-width: 480px) {

@@ -23,9 +23,13 @@ body {
   // max-width: 100%;
 }
 
-.main--with-margin {
+.main {
   margin-top: 195px;
 }
+
+// .main--with-margin {
+//   margin-top: 195px;
+// }
 
 a {
   color: #fff;
@@ -70,7 +74,17 @@ a {
     
 // }
 
+@media (max-width:1000px) {
+  .main {
+    margin-top: 150px;
+  }
+}
+
 @media (max-width:480px) {
+  .main {
+    margin-top: 120px;
+  }
+
   .section__link {
     display: none;
   }

@@ -8,20 +8,20 @@
   padding-left: 23px;
   margin-bottom: 61px;
   // transition: all 100ms linear;
-    // position: fixed;
-    //   background: rgba(32, 8, 59, 0.1);
-    //   backdrop-filter: blur(92.30584716796875px);
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   z-index: 2;
+    position: fixed;
+      background: rgba(32, 8, 59, 0.1);
+      backdrop-filter: blur(92.30584716796875px);
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
 
   @include on1050 {
     margin-bottom: 20px;
   }
 
-  @include on375 {
-    padding: 27px 0;
+  @include on480 {
+    padding: 27px 15px;
   }
   
   &--fixed {
