@@ -393,10 +393,16 @@
     @include on624 {
       width: 100%;
     }
-         @include on400 {
-           padding-left: 38px;
-           padding-right: 38px;
-         }
+    
+    @include on400 {
+      padding-left: 38px;
+      padding-right: 38px;
+    }
+
+    @include on375 {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
   }
 

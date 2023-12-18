@@ -759,6 +759,12 @@ a {
     padding-right: 38px;
   }
 }
+@media (max-width: 375px) {
+  .discover__hero-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .discover__partners {
   display: flex;
   justify-content: space-between;
@@ -944,7 +950,6 @@ a {
   .card__button {
     font-size: 17px;
     max-width: 115px;
-    margin-right: -17px;
   }
 }
 
