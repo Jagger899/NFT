@@ -49,7 +49,7 @@ window.addEventListener('scroll', function () {
 
   if (scrollPosition > 0) {
     header.classList.add('header--fixed');
-    main.classList.add('main--with-margin');
+    // main.classList.add('main--with-margin');
   }
 });
 
